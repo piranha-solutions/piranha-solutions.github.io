@@ -1,0 +1,242 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    max-width:100%;
+    color:#ffffff;
+    background-color: #000000;
+    margin: 0;
+}
+
+#landing{
+    height:100vh;
+    background:url(/rsc/wasteland.png) no-repeat center center fixed;
+    background-size:cover;
+    filter:brightness(0.8) contrast(1.1);
+    -webkit-background-size:cover;
+    -o-background-size:cover;
+    -moz-background-size:cover;
+    box-shadow: inset 0 0 25vh rgba(0,0,0,0.75);
+}
+#segment2{
+    background:url(/rsc/wasteland2.png) no-repeat center center fixed;
+    background-size:cover;
+    filter:brightness(0.9);
+    -webkit-background-size:cover;
+    -o-background-size:cover;
+    -moz-background-size:cover;
+    min-height:100vh;
+    position: relative;
+    box-shadow: inset 0 0 50vh rgba(255, 255, 255, 0.25);
+}
+
+#selection-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 1vh;
+    grid-row-gap: 1vh;
+    align-self: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    width: 90vh;
+    height: 75vh;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: black;
+    margin: 1vh;
+    transition: cubic-bezier(.3,.13,.3,1.0) 0.35s;
+    border-color: white;
+    border-radius: 0.5vh;
+    border-style: solid;
+    border-width: 0.25vh;
+    box-shadow: 0 0 5vh black;
+}
+
+.card:hover {
+    margin: 0;
+    padding: 1vh;
+}
+
+.card:first-child {
+    animation: firstPulse 1.25s infinite;
+}
+
+.card:first-child:hover {
+    animation: hoverShake 0.5s;
+    animation-play-state: running;
+}
+@keyframes hoverShake {
+    0% {
+        transform: rotate(0deg) translateX(0px);
+    }
+    10% {
+        transform: rotate(-2deg) translateX(0px);
+    }
+    20% {
+        transform: rotate(0deg) translateX(0px);
+    }
+    30% {
+        transform: rotate(2deg) translateX(0px);
+    }
+    40% {
+        transform: rotate(0deg) translateX(0px);
+    }
+    50% {
+        transform: rotate(-2deg) translateX(0px);
+    }
+    60% {
+        transform: rotate(0deg) translateX(0px);
+    }
+    70% {
+        transform: rotate(2deg) translateX(0px);
+    }
+    80% {
+        transform: rotate(0deg) translateX(0px);
+    }
+    90% {
+        transform: rotate(-2deg) translateX(0px);
+    }
+    100% {
+        transform: rotate(0deg) translateX(0px);
+    }
+}
+
+@keyframes firstPulse {
+    0% { 
+        transform: scale(1); 
+    }
+    50% { 
+        transform: scale(1.05); 
+    }
+    100% { 
+        transform: scale(1); 
+    }
+}
+
+.cardComingsoon {
+    background-color: rgba(255, 255, 255, 0.33);
+    color: rgba(0, 0, 0, 0.5);
+    margin: 1vh;
+    transition: cubic-bezier(.3,.13,.3,1.0) 0.35s;
+    border-color: white;
+    border-radius: 0.5vh;
+    border-style: solid;
+    border-width: 0.25vh;
+    box-shadow: 0 0 5vh rgba(0, 0, 0, 0.5);
+}
+
+.cardTitle {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 4vh;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    height: min-content;
+    text-align: center;
+}
+
+.cardLink {
+    text-decoration: none;
+    color: unset;
+}
+
+#title-wrapper{
+    height:45%;
+    aspect-ratio: 1.75 / 1;
+    background:rgba(0,0,0,0.3);
+    position:absolute;
+    top: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    left: 50%;
+    border-radius: 1vh;
+    box-shadow: 0 0 5vh rgba(255, 255, 255, 0.5);
+}
+
+#title-container {
+    text-align: center;
+    margin: 0;
+}
+
+.titleText1 {
+    padding: 0em;
+    display: block;
+    position:absolute;
+    font-family: 'Montserrat', sans-serif;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: 800;
+    font-size: 3vh;
+    width: 100%;
+}
+
+.titleText2 {
+    display: block;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 250;
+    font-size: 2vh;
+    width: 45%;
+    height: auto;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+}
+
+.titleText3 {
+    display: block;
+    color: white;
+    position:absolute;
+    font-family: 'Nunito', sans-serif;
+    bottom: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: 750;
+    font-size: 2vh;
+    width: 30%;
+    padding: 1vh;
+    border-color: white;
+    border-width: 0.2vh;
+    border-radius: 0.5vh;
+    border-style:solid;
+    background-color: #ffffff1c;
+    transition: cubic-bezier(.3,.13,.3,1.0) 0.35s;
+    box-shadow: inset 0 0 1vh rgba(255, 255, 255, 0.50);
+    text-decoration: none;
+    text-align: center;
+}
+
+.titleText3:hover {
+    background-color: white;
+    color: rgb(26, 26, 26);
+    cursor: default;
+    box-shadow: 0 0 2vh rgba(255, 255, 255, 0.50);
+}
+/* width */
+::-webkit-scrollbar {
+    width: 1rem;
+}
+  
+/* Track */
+::-webkit-scrollbar-track {
+    background: #111;
+}
+  
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #666;
+    border-radius: 0.5rem;
+}
+  
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #888;
+}
